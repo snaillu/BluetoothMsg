@@ -1,4 +1,4 @@
-package com.keda.msg;
+package com.keda.chat;
 
 import javax.bluetooth.LocalDevice;
 import javax.microedition.io.Connector;

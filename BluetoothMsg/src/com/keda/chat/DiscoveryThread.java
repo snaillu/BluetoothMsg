@@ -1,4 +1,4 @@
-package com.keda.msg;
+package com.keda.chat;
 
 import java.io.IOException;
 import java.util.Vector;

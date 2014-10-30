@@ -1,4 +1,4 @@
-package com.keda.msg;
+package com.keda.chat;
 
 import javax.bluetooth.DiscoveryAgent;
 import javax.bluetooth.ServiceRecord;

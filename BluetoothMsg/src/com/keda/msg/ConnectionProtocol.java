@@ -78,6 +78,7 @@ public class ConnectionProtocol {
 			public void run(){
 				DataInputStream in;
 				try{
+					System.out.println("input the message:");
 					in = connection.openDataInputStream();
 					System.out.println("Read bt address.");
 					String btAddress = readString(in);

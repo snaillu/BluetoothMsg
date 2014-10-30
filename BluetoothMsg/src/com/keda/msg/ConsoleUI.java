@@ -1,6 +1,6 @@
 package com.keda.msg;
 
-import com.keda.chat.ConnectionProtocol;
+import com.keda.msg.ConnectionProtocol;
 
 public class ConsoleUI implements ConnectionProtocol.EventHandler {
 

@@ -13,7 +13,8 @@ import javax.bluetooth.UUID;
 import javax.microedition.io.Connector;
 import javax.microedition.io.StreamConnection;
 
-import com.keda.chat.BluetoothSettings;
+import com.keda.msg.ConnectionProtocol;
+import com.keda.msg.BluetoothSettings;
 
 public class DiscoveryThread extends Thread implements DiscoveryListener {
 
@@ -23,6 +24,9 @@ public class DiscoveryThread extends Thread implements DiscoveryListener {
 	private RemoteDevice currentDevice;
 	private boolean serviceSearchInError;
 	
+	public DiscoveryThread(ConnectionProtocol protocol) {
+		this.protocol = protocol;
+	}
 	
 	
 	@Override

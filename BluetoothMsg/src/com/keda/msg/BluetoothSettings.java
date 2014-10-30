@@ -4,7 +4,7 @@ import javax.bluetooth.DiscoveryAgent;
 import javax.bluetooth.ServiceRecord;
 import javax.bluetooth.UUID;
 
-public interface BluetoothSetting {
+public interface BluetoothSettings {
 	static public final UUID UUID = new UUID("1101", true);
 	static public final int DISCOVERY_MODE = DiscoveryAgent.GIAC;
 	public static final int SECURITY_OPTIONS = ServiceRecord.NOAUTHENTICATE_NOENCRYPT;

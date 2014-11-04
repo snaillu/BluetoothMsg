@@ -4,7 +4,6 @@ import com.keda.utils.DbHelper;
 
 public class MsgOperation {
 	private static MsgOperation m_instance = null;
-	private static String id;
 	
 	private MsgOperation(){}
 	
@@ -17,21 +16,20 @@ public class MsgOperation {
 	}
 	
 	
-	public static void handleMsg(String msg){
+	public static void handleMsg(String msg,String id){
 		if(msg.isEmpty())
 			return;
 		
-		System.out.println("current msg is: "+msg);
+		System.out.println("current msg is: "+msg +" id="+id);
+		insertMsgInfo(msg,id);
 	}
-	public static void setId(String idInfo){
-		id = idInfo;
-	}
+
 	/**
 	 * 
 	 * @param info 信息包格式为：GPS:longitude:latitude:address
 	 * @return 保存信息是否成功
 	 */
-	public static boolean insertMsgInfo(String info){
+	public static boolean insertMsgInfo(String info,String id){
 		if(!info.startsWith("GPS")){
 			return false;
 		}

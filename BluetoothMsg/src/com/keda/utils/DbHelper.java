@@ -7,7 +7,8 @@ import java.sql.Statement;
 
 public class DbHelper {
 	public static Connection getConnection(){
-		String dbPath = "D:/Code/QtWorkSpace/King_1014/PVASMOBILE_VOB/10-common/version/KING/searchrecfile.db";
+		//String dbPath = "D:/Code/QtWorkSpace/King_1014/PVASMOBILE_VOB/10-common/version/KING/searchrecfile.db";
+		String dbPath = "C:/KING/searchrecfile.db";
 		Connection conn = null;
 		try {
 			Class.forName("org.sqlite.JDBC");

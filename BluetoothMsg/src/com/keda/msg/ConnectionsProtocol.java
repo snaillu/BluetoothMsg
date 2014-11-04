@@ -8,6 +8,12 @@ import javax.microedition.io.Connection;
 import javax.microedition.io.StreamConnection;
 
 public class ConnectionsProtocol {
+	protected String id;
+	
+	public ConnectionsProtocol(String id){
+		this.id = id;
+	}
+	
 	class RemoteMsg{
 		Connection conn;
 		DataInputStream in;
@@ -23,7 +29,7 @@ public class ConnectionsProtocol {
 					while(true){
 						try{
 							MsgOperation operation = MsgOperation.getInstance();
-							operation.handleMsg(readString(in));
+							operation.handleMsg(readString(in),id);
 						}catch(IOException e){
 							close();
 							break;

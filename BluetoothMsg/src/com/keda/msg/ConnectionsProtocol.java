@@ -22,7 +22,7 @@ public class ConnectionsProtocol {
 				public void run(){
 					while(true){
 						try{
-							readString(in);
+							System.out.println("msg from client:"+readString(in));
 						}catch(IOException e){
 							close();
 							break;

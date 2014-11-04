@@ -3,7 +3,7 @@ package com.keda.msg;
 
 public class Chat {
 	
-	public Chat(){
+	public Chat(String id){
 		ConnectionsProtocol protocol = new ConnectionsProtocol();
 		
 		new ServerThread(protocol).start();
@@ -11,6 +11,11 @@ public class Chat {
 	}
 	
 	public static void main(String[] args) {
-		new Chat();
+		if(args!=null && args.length>0){
+			new Chat(args[0]);
+		}else{
+			System.out.println("params error.");
+		}
+		
 	}
 }

@@ -5,8 +5,8 @@ import javax.microedition.io.Connector;
 import javax.microedition.io.StreamConnectionNotifier;
 
 public class ServerThread extends Thread {
-	private ConnectionProtocol protocol;
-	public ServerThread(ConnectionProtocol protocol){
+	private ConnectionsProtocol protocol;
+	public ServerThread(ConnectionsProtocol protocol){
 		this.protocol = protocol;
 	}
 	@Override

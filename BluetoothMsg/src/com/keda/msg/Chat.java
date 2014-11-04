@@ -6,13 +6,10 @@ import com.keda.msg.DiscoveryThread;
 public class Chat {
 	
 	public Chat(){
-		ConsoleUI ui = new ConsoleUI();
-		ConnectionProtocol protocol = new ConnectionProtocol(ui);
+		ConnectionsProtocol protocol = new ConnectionsProtocol();
 		
-		protocol.setUserName(System.getProperty("user.name", "anonymous"));
-		
-		//new ServerThread(protocol).start();
-		new DiscoveryThread(protocol).start();
+		new ServerThread(protocol).start();
+		//new DiscoveryThread(protocol).start();
 	}
 	
 	public static void main(String[] args) {

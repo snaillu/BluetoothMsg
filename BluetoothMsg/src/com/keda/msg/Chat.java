@@ -1,7 +1,5 @@
 package com.keda.msg;
 
-import com.keda.msg.ConnectionProtocol;
-import com.keda.msg.DiscoveryThread;
 
 public class Chat {
 	

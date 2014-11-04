@@ -22,7 +22,8 @@ public class ConnectionsProtocol {
 				public void run(){
 					while(true){
 						try{
-							System.out.println("msg from client:"+readString(in));
+							MsgOperation operation = MsgOperation.getInstance();
+							operation.handleMsg(readString(in));
 						}catch(IOException e){
 							close();
 							break;

@@ -21,7 +21,10 @@ public class MsgOperation {
 			return;
 		
 		System.out.println("current msg is: "+msg +" id="+id);
-		insertMsgInfo(msg,id);
+		boolean result = insertMsgInfo(msg,id);
+		if(result){
+			System.exit(0);
+		}
 	}
 
 	/**

@@ -23,6 +23,7 @@ public class MsgOperation {
 		System.out.println("current msg is: "+msg +" id="+id);
 		boolean result = insertMsgInfo(msg,id);
 		if(result){
+			System.out.println("Kill the BluetoothMsg Server.");
 			System.exit(0);
 		}
 	}

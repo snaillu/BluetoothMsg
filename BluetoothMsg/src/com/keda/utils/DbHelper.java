@@ -23,19 +23,20 @@ public class DbHelper {
 	
 	public static boolean execSql(String sql){
 		Connection conn = getConnection();
-		boolean result = false;
+		int count = 0;
 		
 		try {
 			Statement stmt = conn.createStatement();
-			result = stmt.execute(sql);
+			count = stmt.executeUpdate(sql);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return result;
+		return count>0;
 	}
 	
 	public static void main(String[] args) {
 		String sql = "update configinfo set loginName = 'snail' where configid=1";
-		execSql(sql);
+		boolean result = execSql(sql);
+		System.out.println("result="+result);
 	}
 }

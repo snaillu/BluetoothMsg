@@ -40,10 +40,11 @@ public class MsgOperation {
 		
 		String[] locInfo = info.split(":");
 		if(locInfo.length!=4){
+			System.out.println("params error can't insert.");
 			return false;
 		}
 		
-		String sql = "update channelinfo set longitude='"+locInfo[1]+"',latitude='"+locInfo[2]+"',address='"+locInfo[3]+"' where id="+id;
+		String sql = "update channelinfo set longitude='"+locInfo[1]+"',latitude='"+locInfo[2]+"',address='"+locInfo[3].trim()+"' where id="+id;
 		System.out.println("Sql="+sql);
 		
 		return DbHelper.execSql(sql);

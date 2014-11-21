@@ -35,8 +35,9 @@ public class DbHelper {
 	}
 	
 	public static void main(String[] args) {
-		String sql = "update configinfo set loginName = 'snail' where configid=1";
+		String sql = "update configinfo set loginName = '' where configid=1";
 		boolean result = execSql(sql);
 		System.out.println("result="+result);
+		
 	}
 }

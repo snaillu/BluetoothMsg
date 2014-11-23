@@ -11,7 +11,7 @@ public class ServerKiller extends Thread {
 
 	private byte[] content;
 	private byte[] header;
-	private int port = 8011;
+	private int port = 60169;
 	
 	@Override
 	public void run() {

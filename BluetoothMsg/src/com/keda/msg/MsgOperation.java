@@ -49,8 +49,12 @@ public class MsgOperation {
 			return false;
 		}
 		
-		String sql = "update channelinfo set longitude='"+locInfo[1]+"',latitude='"+locInfo[2]+"',address='"+locInfo[3].trim()+"' where dvrid="+idInfo[0] +" and channelid="+idInfo[1];
+		String sql = "update channelinfo set longitude='"+locInfo[1]+"',latitude='"+locInfo[2]+"' where dvrid="+idInfo[0] +" and channelid="+idInfo[1];
 		System.out.println("Sql="+sql);
+		String dvrSql = "update dvrinfo set address='"+locInfo[3].trim()+"' where handle = "+idInfo[0];
+		System.out.println("dvrSql="+dvrSql);
+		boolean dvrResult = DbHelper.execSql(dvrSql);
+		System.out.println("dvrResult="+dvrResult);
 		
 		return DbHelper.execSql(sql);
 	}
